@@ -14,7 +14,7 @@
 
 ## 2. Git Clone & Git Flow Setting
 
-- Understand [git-flow](http://danielkummer.github.io/git-flow-cheatsheet/).
+- **Understand [git-flow](http://danielkummer.github.io/git-flow-cheatsheet/).**
 
 - Clone Repository to your Mac.
 
@@ -110,6 +110,8 @@
   ```
 
 ![git-flow-using-image](./images/git-flow-using.png)
+
+![git-flow-using-image-after-publish](./images/git-flow-using-after-publish.png)
 
 - Pull your works or others.
 

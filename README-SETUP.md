@@ -1,46 +1,95 @@
 # Set-up Guide for Contributors
 
-(notice) This guide has been written for Mac OS users.
+> **NOTICE**  
+> This guide has been written for MacOS users.
 
-## How to get ready your seminar
-
-### First, check [prerequisites](./#prerequisites).
-
-### Second, Git Clone & Git Flow Setting
-
-```bash
-# Clone at your local
-git clone https://github.com/SPONGE-JL/CrashLab-CleanCode.git && cd CrashLab-CleanCode
-
-# Setting git flow
-# TODO..
-```
-
-### Third, use Git Flow
-
-```bash
-# TODO..
-```
+- [How to use](./README-SETUP.md#how-to-use)
+- [Prerequisites](./README-SETUP.md#prerequisites-for-macos)
 
 ---
 
-## Prerequisites.
+# How to use
 
-1. [Install Homebrew]()
-2. [Install Git]()
-3. [Set Global Git-Config]()
-4. Option. [Set Default Initial Branch Name 'main']()
-5. Option. [Set Global Git-Graph-Beautify on CLI]()
-6. [Install Git-Flow]()
-7. [Install Prefer IDE]() 
+## 1. check [prerequisites](./README-SETUP.md#prerequisites-for-macos).
 
-### Install [Homebrew](https://brew.sh/index_ko). 
+## 2. Git Clone & Git Flow Setting
+
+- Clone Repository to your Mac.
+
+  ```bash
+  git clone https://github.com/SPONGE-JL/CrashLab-CleanCode.git
+  ```
+
+- Setting Local Config for [Rebase & Fast-Forward](https://backlog.com/git-tutorial/kr/stepup/stepup1_4.html).
+
+  ```bash
+  cd CrashLab-CleanCode
+  git config --local pull.rebase true
+  git config --local pull.ff only
+
+  # Check
+  git config --list | egrep "pull|rebase|ff"
+    # Like below ... 
+    # pull.rebase=true    >> Set pulling strategy into 'rebase' not 'merge'.
+    # pull.ff=only        >> Set fast-forward only
+  ```
+
+-  Setting Git-Flow
+
+  ```bash
+  # Start Git-Flow
+  git flow init
+    # Like below ..
+    # Which branch should be used for bringing forth production releases?
+    #    - main
+    # Branch name for production releases: [main]                   << ENTER
+    # Branch name for "next release" development: [develop] seminar << TYPE 'seminar'
+    #
+    # How to name your supporting branch prefixes?
+    # Feature branches? [feature/] chapter   << TYPE 'chapter'
+    # Release branches? [release/]           << ENTER
+    # Hotfix branches? [hotfix/]             << ENTER
+    # Support branches? [support/]           << ENTER
+    # Version tag prefix? []                 << ENTER
+
+  # Check
+  git status | grep "On branch"
+    # Like below : Switched to 'semonar' branch for merging developed feautres (name by 'chapter')
+    # On branch seminar
+
+  # Pull
+  git pull origin seminar
+  ```
+
+![git-flow-setting-image](./images/git-flow-setting.png)
+
+## 3. use Git Flow
+
+```bash
+# TODO..
+```
+
+[Go to Index](./README-SETUP.md#index)
+
+---
+
+# Prerequisites for MacOS.
+
+1. [Install Homebrew](./README-SETUP.md#install-homebrew)
+2. [Install Git](./README-SETUP.md#install-git)
+3. [Set Global Git-Config](./README-SETUP.md#set-global-git-configuration)
+4. Option. [Set Default Initial Branch Name 'main'](./README-SETUP.md#option-set-default-initial-git-branch-name-the-main-not-the-master)
+5. Option. [Set Global Git-Graph-Beautify on CLI](./README-SETUP.md#option-beautify-git-graph-on-cli)
+6. [Install Git-Flow](./README-SETUP.md#install-git-flow)
+7. [Install Prefer IDE](./README-SETUP.md#install-prefer-ide) 
+
+## Install [Homebrew](https://brew.sh/index_ko). 
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### install [Git](https://git-scm.com/download/mac).
+## Install [Git](https://git-scm.com/download/mac).
 
 ```bash
 # Check installation
@@ -54,7 +103,7 @@ git --version
   # git version 2.30.1 (Apple Git-130)
 ```
 
-### set global git-configuration for MacOS.
+## Set global git-configuration.
 
 ```bash
 git config --global core.autocrlf true
@@ -71,7 +120,7 @@ git config --list | grep user
 vi ~/.gitconfig
 ```
 
-### `[option]` set default initial git-branch-name the `main` (not the `master`).
+## `[option]` Set default initial git-branch-name the `main` (not the master).
 
 ```bash
 git config --global init.defaultBranch main
@@ -83,7 +132,7 @@ cat ~/.gitconfig | egrep "init|defaultBranch"
   #   defaultBranch = main 
 ```
 
-### `[option]` beautify git graph on cli.
+## `[option]` Beautify git graph on cli.
 
 ```bash
 # Backup the origin config
@@ -108,7 +157,7 @@ git lg2
   #           Initial commit - sponge
 ```
 
-### Install Git-Flow for MacOS.
+## Install Git-Flow.
 
 ```bash
 brew install git-flow
@@ -119,11 +168,11 @@ git flow version
   # 0.4.1
 ```
 
-### Install Prefer IDE.
+## Install Prefer IDE.
 
 choose one to pick prefer method
 
-#### Visual Studio Code
+### Visual Studio Code
 
 - [Install with Homebrew](https://formulae.brew.sh/cask/visual-studio-code)
 
@@ -133,7 +182,7 @@ choose one to pick prefer method
 
 - Download App from [Homepage](https://code.visualstudio.com/download#)
 
-#### Intellij IDEA - Community Edition
+### Intellij IDEA - Community Edition
 
 - [Install with Homebrew](https://formulae.brew.sh/cask/intellij-idea)
   
@@ -142,3 +191,5 @@ choose one to pick prefer method
   ```
 
 - Download App from [Homepage](https://www.jetbrains.com/ko-kr/idea/download/#section=mac)
+
+[Go to Index](./README-SETUP.md#index)

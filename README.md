@@ -4,6 +4,7 @@ Read and talk about [Clean Code](https://enos.itcollege.ee/~jpoial/oop/naited/Cl
 
 ## Contents
 
+- [Wiki Home](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki#welcome-crashlab-cleancode-wiki)
 - Chapter 01. Clean Code
 - Chapter 02. Meaningful Names
 - Chapter 03. Functions
@@ -14,7 +15,7 @@ Read and talk about [Clean Code](https://enos.itcollege.ee/~jpoial/oop/naited/Cl
 - Chapter 08. Boundaries
 - Chapter 09. Unit Tests
 - Chapter 10. Classes
-- Chpater 11. Systems
+- Chapter 11. Systems
 - Chapter 12. Emergence
 - Chapter 13. Concurrency
 - Chapter 14. Successive Refinement

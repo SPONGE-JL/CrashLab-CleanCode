@@ -122,12 +122,21 @@
     # Like below ...
     #  origin/HEAD -> origin/main
     #  origin/main
-    #  origin/prepare/Chapter00-Tile
+    #  origin/prepare/Chapter00-Tile  << Target feature branch with pulling
     #  ...
     #  origin/seminar
 
   # Pull what you want
-  git flow feature pull Chapter00-Title
+  git flow feature pull origin Chapter00-Title
+    # Like below ..
+    # Created local branch prepare/Chapter00-Title based on origin's prepare/Chapter00-Title.
+  
+  # Check your branch has switched
+  git branch | cat
+    # Like below
+    #   main
+    # * prepare/Chapter00-Settings
+    #   seminar
   ```
 
 > [Go to Index](./README-SETUP.md#index)

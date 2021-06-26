@@ -119,7 +119,7 @@
   git push -u origin $CURRENT_BRANCH
   ```
 
-  ![git-flow-using-image-after-publish](./images/git-flow-using-after-publish.png)
+  ![git-flow-using-after-publish-image](./images/git-flow-using-after-publish.png)
 
 - Pull your works or others.
 
@@ -163,7 +163,19 @@
   CURRENT_FEATURE=`git flow feature |grep "*" |awk -F " " '{print $2}'`
   echo "CURRENT_FEATURE: ${CURRENT_FEATURE}"
   git flow feature finish $CURRENT_FEATURE
+    # Type Merge Message (maybe auto-completed)
+    # Add Merge Commit with this message : Type [esc] key --> Type ":wq" --> Type [enter] key
+    # Finally Merged.
+  
+  # Your workspace has been switch to seminar (develop) branch.
+  # Push to remote
+  git push -u origin seminar
   ```
+  ![git-flow-using-finish-image](./images/git-flow-using-finish.png)
+  ![git-flow-using-finish-commit-msg-image](./images/git-flow-using-finish-commit-msg.png)
+  ![git-flow-using-push-image](./images/git-flow-using-push.png)
+
+---
 
 > [Go to Index](./README-STEUP.md#index)
 
@@ -288,4 +300,8 @@ choose one to pick prefer method
 
 - Download App from [Homepage](https://www.jetbrains.com/ko-kr/idea/download/#section=mac)
 
+---
+
 > [Go to Index](./README-SETUP.md#index)
+
+---

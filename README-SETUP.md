@@ -30,7 +30,7 @@
   git config --local pull.ff only
 
   # Check
-  git config --list | egrep "pull|rebase|ff"
+  git config --list |egrep "pull|rebase|ff"
     # Like below ... 
     # pull.rebase=true    >> Set pulling strategy into 'rebase' not 'merge'.
     # pull.ff=only        >> Set fast-forward only
@@ -40,7 +40,7 @@
 
   ```bash
   # Check Current Branch
-  git status | grep "On branch"
+  git status |grep "On branch"
     # Like below ...
     # On branch main
   
@@ -60,7 +60,7 @@
     # Version tag prefix? []                 << ENTER
   
   # Check Current Branch has been switched
-  git status | grep "On branch"
+  git status |grep "On branch"
     # Like below : Switched to 'semonar' branch for merging developed feautres (name by 'chapter')
     # On branch seminar
 
@@ -76,7 +76,7 @@
 
   ```bash
   # Check branch list
-  git branch | cat
+  git branch |cat
     # Maybe like below...
     #   main
     # * seminar
@@ -105,7 +105,7 @@
 
   ```bash
   # Publish
-  CURRENT_BRANCH=`git branch | grep "*" | cut -c 3-` && echo "CURRENT_BRANCH: ${CURRENT_BRANCH}"
+  CURRENT_BRANCH=`git branch |grep "*" |cut -c 3-` && echo "CURRENT_BRANCH: ${CURRENT_BRANCH}"
   git flow feature publish $CURRENT_BRANCH
   ```
 
@@ -115,7 +115,7 @@
 
   ```bash
   # After commit
-  CURRENT_BRANCH=`git branch | grep "*" | cut -c 3-` && echo "CURRENT_BRANCH: ${CURRENT_BRANCH}"
+  CURRENT_BRANCH=`git branch |grep "*" |cut -c 3-` && echo "CURRENT_BRANCH: ${CURRENT_BRANCH}"
   git push -u origin $CURRENT_BRANCH
   ```
 
@@ -126,7 +126,7 @@
   ```bash
   # Check our remote branch list
   git fetch -u origin 
-  git branch -r | cat
+  git branch -r |cat
     # Like below ...
     #  origin/HEAD -> origin/main
     #  origin/main
@@ -140,11 +140,26 @@
     # Created local branch prepare/Chapter00-Title based on origin's prepare/Chapter00-Title.
   
   # Check your branch has switched
-  git branch | cat
+  git branch |cat
     # Like below
     #   main
     # * prepare/Chapter00-Settings
     #   seminar
+  ```
+
+- Merge 'your branch (feature)' to 'seminar (develop)' with `finish` command.
+
+  ```bash
+  # After finish to prepare your seminar
+  # Update seminar (develop) branch
+  TARGET_BRANCH=`git branch |grep "*" |cut -c 3-` && echo "TARGET_BRANCH: ${TARGET_BRANCH}"
+  git checkout seminar
+  git pull origin seminar
+  git checkout $TARGET_BRANCH
+  
+  # Then, finish your prepare (feature) branch
+  TARGET_FEATURE=`echo $TARGET_BRANCH |awk -F "/" '{print $2}'` && echo "TARGET_FEATURE: ${TARGET_FEATURE}"
+  git flow feature finish $TARGET_BRANCH
   ```
 
 > [Go to Index](./README-SETUP.md#index)
@@ -189,7 +204,7 @@ git config --global user.name <github-nicknanme>
 git config --global user.email <github-email>
 
 # Check
-git config --list | grep user
+git config --list |grep user
   # Like below ..
   # user.email=dev2sponge@gmail.com
   # user.name=SPONGE-JL
@@ -204,7 +219,7 @@ vi ~/.gitconfig
 git config --global init.defaultBranch main
 
 # Check
-cat ~/.gitconfig | egrep "init|defaultBranch"
+cat ~/.gitconfig |egrep "init|defaultBranch"
   # Like below ..
   # [init]
   #   defaultBranch = main 

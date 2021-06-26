@@ -105,13 +105,21 @@
 
   ```bash
   # Publish
-  MY_PART=`git status | grep "On branch" | cut -c 11-`
-  git flow feature publish $MY_PART
+  CURRENT_BRANCH=`git branch | grep "*" | cut -c 3-` && echo "CURRENT_BRANCH: ${CURRENT_BRANCH}"
+  git flow feature publish $CURRENT_BRANCH
   ```
 
-![git-flow-using-image](./images/git-flow-using.png)
+  ![git-flow-using-image](./images/git-flow-using.png)
 
-![git-flow-using-image-after-publish](./images/git-flow-using-after-publish.png)
+- Push to already published feature branch.
+
+  ```bash
+  # After commit
+  CURRENT_BRANCH=`git branch | grep "*" | cut -c 3-` && echo "CURRENT_BRANCH: ${CURRENT_BRANCH}"
+  git push -u origin $CURRENT_BRANCH
+  ```
+
+  ![git-flow-using-image-after-publish](./images/git-flow-using-after-publish.png)
 
 - Pull your works or others.
 

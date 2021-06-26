@@ -36,14 +36,14 @@
     # pull.ff=only        >> Set fast-forward only
   ```
 
--  Setting Git-Flow
+- Setting Git-Flow
 
   ```bash
   # Check Current Branch
   git status |grep "On branch"
     # Like below ...
     # On branch main
-  
+
   # Start Git-Flow
   git flow init
     # Like below ..
@@ -58,7 +58,7 @@
     # Hotfix branches? [hotfix/]             << ENTER
     # Support branches? [support/]           << ENTER
     # Version tag prefix? []                 << ENTER
-  
+
   # Check Current Branch has been switched
   git status |grep "On branch"
     # Like below : Switched to 'semonar' branch for merging developed feautres (name by 'chapter')
@@ -68,7 +68,7 @@
   git pull origin seminar
   ```
 
-![git-flow-setting-image](./images/git-flow-setting.png)
+  ![git-flow-setting-image](./images/git-flow-setting.png)
 
 ## 3. use Git Flow
 
@@ -151,18 +151,21 @@
 
   ```bash
   # After finish to prepare your seminar
-  # Update seminar (develop) branch
-  TARGET_BRANCH=`git branch |grep "*" |cut -c 3-` && echo "TARGET_BRANCH: ${TARGET_BRANCH}"
+  CURRENT_BRANCH=`git branch |grep "*" |cut -c 3-`
+  echo "CURRENT_BRANCH: ${CURRENT_BRANCH}"
+  
+  # First, Update seminar (develop) branch
   git checkout seminar
   git pull origin seminar
-  git checkout $TARGET_BRANCH
   
   # Then, finish your prepare (feature) branch
-  TARGET_FEATURE=`echo $TARGET_BRANCH |awk -F "/" '{print $2}'` && echo "TARGET_FEATURE: ${TARGET_FEATURE}"
-  git flow feature finish $TARGET_BRANCH
+  git checkout $CURRENT_BRANCH
+  CURRENT_FEATURE=`git flow feature |grep "*" |awk -F " " '{print $2}'`
+  echo "CURRENT_FEATURE: ${CURRENT_FEATURE}"
+  git flow feature finish $CURRENT_FEATURE
   ```
 
-> [Go to Index](./README-SETUP.md#index)
+> [Go to Index](./README-STEUP.md#index)
 
 ---
 

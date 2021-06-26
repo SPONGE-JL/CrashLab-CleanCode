@@ -14,6 +14,8 @@
 
 ## 2. Git Clone & Git Flow Setting
 
+- **Understand [git-flow](http://danielkummer.github.io/git-flow-cheatsheet/).**
+
 - Clone Repository to your Mac.
 
   ```bash
@@ -28,15 +30,20 @@
   git config --local pull.ff only
 
   # Check
-  git config --list | egrep "pull|rebase|ff"
+  git config --list |egrep "pull|rebase|ff"
     # Like below ... 
     # pull.rebase=true    >> Set pulling strategy into 'rebase' not 'merge'.
     # pull.ff=only        >> Set fast-forward only
   ```
 
--  Setting Git-Flow
+- Setting Git-Flow
 
   ```bash
+  # Check Current Branch
+  git status |grep "On branch"
+    # Like below ...
+    # On branch main
+
   # Start Git-Flow
   git flow init
     # Like below ..
@@ -46,14 +53,14 @@
     # Branch name for "next release" development: [develop] seminar << TYPE 'seminar'
     #
     # How to name your supporting branch prefixes?
-    # Feature branches? [feature/] chapter   << TYPE 'chapter'
+    # Feature branches? [feature/] prepare/  << TYPE 'prepare/'
     # Release branches? [release/]           << ENTER
     # Hotfix branches? [hotfix/]             << ENTER
     # Support branches? [support/]           << ENTER
     # Version tag prefix? []                 << ENTER
 
-  # Check
-  git status | grep "On branch"
+  # Check Current Branch has been switched
+  git status |grep "On branch"
     # Like below : Switched to 'semonar' branch for merging developed feautres (name by 'chapter')
     # On branch seminar
 
@@ -61,15 +68,116 @@
   git pull origin seminar
   ```
 
-![git-flow-setting-image](./images/git-flow-setting.png)
+  ![git-flow-setting-image](./images/git-flow-setting.png)
 
 ## 3. use Git Flow
 
-```bash
-# TODO..
-```
+- Switch to 'seminar' branch with updating.
 
-[Go to Index](./README-SETUP.md#index)
+  ```bash
+  # Check branch list
+  git branch |cat
+    # Maybe like below...
+    #   main
+    # * seminar
+    #   (other prepare branches could exist)
+
+  git checkout seminar
+    # If you see like this, the seminar branch is latest state
+    # Already on 'seminar'
+    # Your branch is up to date with 'origin/seminar'.
+    
+  # If it isn't up-to-date, pull from remote.
+  git pull origin seminar
+  ```
+
+- Start to prepare your leading-seminar
+
+  ```bash
+  # Start new feautre for preparing your seminar
+  git flow feature start Chapter00-Title
+
+    # Add and edit your files. (e.g Java or Typescript codes or README.md)
+    # Commit changes with messages.
+  ```
+
+- Publish your works when you want to save in remote.
+
+  ```bash
+  # Publish
+  CURRENT_BRANCH=`git branch |grep "*" |cut -c 3-` && echo "CURRENT_BRANCH: ${CURRENT_BRANCH}"
+  git flow feature publish $CURRENT_BRANCH
+  ```
+
+  ![git-flow-using-image](./images/git-flow-using.png)
+
+- Push to already published feature branch.
+
+  ```bash
+  # After commit
+  CURRENT_BRANCH=`git branch |grep "*" |cut -c 3-` && echo "CURRENT_BRANCH: ${CURRENT_BRANCH}"
+  git push -u origin $CURRENT_BRANCH
+  ```
+
+  ![git-flow-using-after-publish-image](./images/git-flow-using-after-publish.png)
+
+- Pull your works or others.
+
+  ```bash
+  # Check our remote branch list
+  git fetch -u origin 
+  git branch -r |cat
+    # Like below ...
+    #  origin/HEAD -> origin/main
+    #  origin/main
+    #  origin/prepare/Chapter00-Tile  << Target feature branch with pulling
+    #  ...
+    #  origin/seminar
+
+  # Pull what you want
+  git flow feature pull origin Chapter00-Title
+    # Like below ..
+    # Created local branch prepare/Chapter00-Title based on origin's prepare/Chapter00-Title.
+  
+  # Check your branch has switched
+  git branch |cat
+    # Like below
+    #   main
+    # * prepare/Chapter00-Settings
+    #   seminar
+  ```
+
+- Merge 'your branch (feature)' to 'seminar (develop)' with `finish` command.
+
+  ```bash
+  # After finish to prepare your seminar
+  CURRENT_BRANCH=`git branch |grep "*" |cut -c 3-`
+  echo "CURRENT_BRANCH: ${CURRENT_BRANCH}"
+  
+  # First, Update seminar (develop) branch
+  git checkout seminar
+  git pull origin seminar
+  
+  # Then, finish your prepare (feature) branch
+  git checkout $CURRENT_BRANCH
+  CURRENT_FEATURE=`git flow feature |grep "*" |awk -F " " '{print $2}'`
+  echo "CURRENT_FEATURE: ${CURRENT_FEATURE}"
+  git flow feature finish $CURRENT_FEATURE
+    # Type Merge Message (maybe auto-completed)
+    # Add Merge Commit with this message : Type [esc] key --> Type ":wq" --> Type [enter] key
+    # Finally Merged.
+  
+  # Your workspace has been switch to seminar (develop) branch.
+  # Push to remote
+  git push -u origin seminar
+  ```
+  ![git-flow-using-finish-image](./images/git-flow-using-finish.png)
+  ![git-flow-using-finish-commit-msg-image](./images/git-flow-using-finish-commit-msg.png)
+  ![git-flow-using-push-image](./images/git-flow-using-push.png)
+
+---
+
+> [Go to Index](./README-STEUP.md#index)
 
 ---
 
@@ -111,7 +219,7 @@ git config --global user.name <github-nicknanme>
 git config --global user.email <github-email>
 
 # Check
-git config --list | grep user
+git config --list |grep user
   # Like below ..
   # user.email=dev2sponge@gmail.com
   # user.name=SPONGE-JL
@@ -126,7 +234,7 @@ vi ~/.gitconfig
 git config --global init.defaultBranch main
 
 # Check
-cat ~/.gitconfig | egrep "init|defaultBranch"
+cat ~/.gitconfig |egrep "init|defaultBranch"
   # Like below ..
   # [init]
   #   defaultBranch = main 
@@ -192,4 +300,8 @@ choose one to pick prefer method
 
 - Download App from [Homepage](https://www.jetbrains.com/ko-kr/idea/download/#section=mac)
 
-[Go to Index](./README-SETUP.md#index)
+---
+
+> [Go to Index](./README-SETUP.md#index)
+
+---

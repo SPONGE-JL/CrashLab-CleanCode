@@ -3,18 +3,18 @@
 > **NOTICE**  
 > This guide has been written for MacOS users.
 
-- [How to use](./README-SETUP.md#how-to-use)
 - [Prerequisites](./README-SETUP.md#prerequisites-for-macos)
-
----
+- [How to use](./README-SETUP.md#how-to-use)
 
 # How to use
 
-## 1. check [prerequisites](./README-SETUP.md#prerequisites-for-macos).
+## 1. Check [prerequisites](./README-SETUP.md#prerequisites-for-macos).
 
-## 2. Git Clone & Git Flow Setting
+## 2. Understand '[Git-Flow](http://danielkummer.github.io/git-flow-cheatsheet/)'
 
-- **Understand [git-flow](http://danielkummer.github.io/git-flow-cheatsheet/).**
+![git-flow-examples](https://camo.githubusercontent.com/402f70bf57b21727e50198fee8a4aea8c3b083b27831de183e7e280510b914cd/68747470733a2f2f776f6f776162726f732e6769746875622e696f2f696d672f323031372d31302d33302f6769742d666c6f775f6f766572616c6c5f67726170682e706e67)
+
+## 3. Git Clone & Git Flow Setting
 
 - Clone Repository to your Mac.
 
@@ -177,7 +177,7 @@
 
 ---
 
-> [Go to Index](./README-STEUP.md#index)
+> [Go to Top](./README-SETUP.md#set-up-guide-for-contributors)
 
 ---
 
@@ -302,6 +302,4 @@ choose one to pick prefer method
 
 ---
 
-> [Go to Index](./README-SETUP.md#index)
-
----
+> [Go to Top](./README-SETUP.md#set-up-guide-for-contributors)

@@ -300,6 +300,24 @@ choose one to pick prefer method
 
 - Download App from [Homepage](https://www.jetbrains.com/ko-kr/idea/download/#section=mac)
 
+- [Execute in Command Line Interface (CLI)](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) : like `code .`
+
+  ```bash
+  # In Bash
+  cat << EOF >> ~/.bash_profile
+  # Add Visual Studio Code (code)
+  export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+  EOF
+  ```
+
+  ```zsh
+  # In Zsh
+  cat << EOF >> ~/.bash_profile
+  # Add Visual Studio Code (code)
+  export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+  EOF
+  ```
+
 ---
 
 > [Go to Top](./README-SETUP.md#set-up-guide-for-contributors)

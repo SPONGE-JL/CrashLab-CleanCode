@@ -7,8 +7,8 @@ Read and talk about [Clean Code](https://enos.itcollege.ee/~jpoial/oop/naited/Cl
 ## [Wiki Home](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki#welcome-crashlab-cleancode-wiki)
 
 - (Posted! 🌳)
-- (Partition! 🍀)
 - [Chapter 01. Clean Code](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-01.-Clean-Code) [[정렬](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313016)]
+- (Partition! 🍀)
 - [Chapter 02. Meaningful Names](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-02.-Meaningful-Names) [[성현(+정렬)](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313130)]
 - [Chapter 03. Functions](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-03.-Meaningful-Names) [[영식(+영민)](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313140)]
 - [Chapter 04. Comments](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-04.-Comments) [[기훈](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313230)]

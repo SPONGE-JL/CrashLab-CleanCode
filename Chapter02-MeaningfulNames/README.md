@@ -232,30 +232,14 @@ getUserName(), setUserName(), isValidate()...
 Q. 스스로 의미가 분명한 이름이 없지 않지만 대다수 그러지못하다. 그렇다면?  
 A. 클래스, 함수, 이름 공간에 넣어 맥락을 부여한다. 이 모든 방법이 실패하면 마지막 수단은 접두어를 붙여 보는 수 밖에.. 
 
-- 의미 없는 맥락
-  ```javascript
-  const join = (str, str2) => {
-    STORAGE.add(str, str2)
-  }
-  join('뭐를','넣죠?');
-  ```
-
-- 의미 있는 맥락
-  ```javascript
-  const joinNewUser = () => {
-    
-  }
-  
-  const newUser = {
-    
-  }
-
-  joinNewUser('뭐를','넣죠?');
-  ```
-
 ## 불필요한 맥락을 없애라
 > 일반적으로 짧은 이름이 긴 이름 보다 좋다. BUT, <u>의미가 분명한 경우에만 한한다.  </u>  
 > 이름에 불필요한 맥락을 추가하지 않도록 주의한다.
+
+- A. [맥락이 드러나지 않는 코드](https://github.com/SPONGE-JL/CrashLab-CleanCode/commit/1fba629b0919505758b348af3e57899cdc9f4047#diff-be0c9be2260016fa03cf53a5a200a43fe190f29ffd283f95dfbd7da705dd69b3)
+- B. [의미있는 맥락을 전달하는 코드](https://github.com/SPONGE-JL/CrashLab-CleanCode/blob/ddbea86c4066654e27d33cde032757d8a5936c74/Chapter02-MeaningfulNames/sample-meaning-ful-context.js#L4)
+- [A에서 B로의 전환](https://github.com/SPONGE-JL/CrashLab-CleanCode/commit/ddbea86c4066654e27d33cde032757d8a5936c74)
+
 
 ## 마치면서
 - 이름을 바꾸지 않으려는 이유 하나는 다른 개발자가 반대할까봐 두려워서다.

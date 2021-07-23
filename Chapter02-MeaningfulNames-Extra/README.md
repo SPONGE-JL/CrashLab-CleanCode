@@ -94,9 +94,13 @@ const newUser = UsersAPI.signUp(reqUser);
   - 팩토리 메서드에서만 생성자(constructor)에 접근할 수 있고 `new` 키워드를 사용할 수 있습니다.
   - 즉, 프로그램에서 대상 객체를 인스턴스로 생성하는 방법은 팩토리 메서드만을 이용하도록 합니다.
 
-### 구현해 볼까요?
+### 구현한 예제 확인해 볼까요?
 
-[ Hands-on! ]
+```bash
+cd Chapter02-MeaningfulNames-Extra
+npm install
+npm run extra
+```
 
 ---
 

@@ -17,6 +17,7 @@ export type UserDefaultProps = {
 export enum UserFrom {
   Google = "Google", // From Google
   Origin = "Origin",
+  Amazon = "Amazon", // From Amazon
 }
 export type AdditionalSpec = GoogleUserSpec | OriginUserSpec;
 interface UserAddedProps {
@@ -32,7 +33,7 @@ class User implements UserDefaultProps, UserAddedProps {
   readonly profileComment?: string;
   // UserSpec
   readonly signFrom: UserFrom;
-  readonly additionalSpec: AdditionalSpec; // Set in child class
+  readonly additionalSpec: AdditionalSpec;
 
   // Static Factory Method Pattern
   public static Create = (
@@ -47,6 +48,7 @@ class User implements UserDefaultProps, UserAddedProps {
     switch (signFrom) {
       case UserFrom.Google:
       case UserFrom.Origin:
+      case UserFrom.Amazon:
         const userInstance: User = new User(signFrom, userProps);
         console.log(`>  INFO | UserFactory has created the UserInstance! 🚀\n`);
         return userInstance;
@@ -65,7 +67,7 @@ class User implements UserDefaultProps, UserAddedProps {
   ) {
     const { userDefaultProps, additionalSpec } = userProps;
     // UserData
-    this.userId = userDefaultProps.userEmail;
+    this.userId = userDefaultProps.userId;
     this.userPw = userDefaultProps.userPw;
     this.userEmail = userDefaultProps.userEmail;
     this.profileComment = userDefaultProps.profileComment ?? "";
@@ -75,14 +77,15 @@ class User implements UserDefaultProps, UserAddedProps {
   }
 
   private convertAdditionalSpec = (additionalSpec: AdditionalSpec) => {
-    switch (this.signFrom.toUpperCase()) {
-      case UserFrom.Google.toUpperCase():
+    switch (this.signFrom) {
+      case UserFrom.Google:
         return GoogleConvertor.convertForUser(additionalSpec as GoogleUserSpec);
-      case UserFrom.Origin.toUpperCase():
+      case UserFrom.Origin:
         return OriginConvertor.convertForUser(additionalSpec as OriginUserSpec);
 
+      // Amazon Type will be error..
       default:
-        const prefix = `> ERROR | From ${this.signFrom} cannot handle to create User..! (at convertAdditionalSpec)`;
+        const prefix = `> ERROR | From ${this.signFrom} cannot handle to create User..! (at Convertor not implemented)`;
         const thisProps = `> TRACE | this: ${JSON.stringify(this)}`;
         throw new Error(`\n${prefix}\n${thisProps}`);
     }

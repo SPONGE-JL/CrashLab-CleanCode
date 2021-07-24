@@ -53,7 +53,7 @@ const newUser = UsersAPI.signUp(reqUser);
 ### 시간이 흘러서
 
 시간이 흘러서 우리 서비스는 시장점유율이 올라가고, 제휴업체도 갈수록 늘어나고 있습니다.  
-이떄 이러한 요구사항이 들어온다고 가정해 봅시다. 
+이때 이러한 요구사항이 들어온다고 가정해 봅시다. 
 
 > _제휴사의 로그인 시스템의 인증 정보를 기반으로_  
 > _우리 서비스를 이용할 수 있는 <u>SSO로그인(Single Sign-On Login)</u> 기능 구현 요망_
@@ -85,7 +85,7 @@ const newUser = UsersAPI.signUp(reqUser);
 
 ## Intention of this Pattern | 패턴의 의도
 
-**정적 팩토리 메서드(Static Factory Method)**는 이런 상황의 해법 중 하나로 선택될 수 있습니다.
+**정적 팩토리 메서드(Static Factory Method)는** 이런 상황의 해법 중 하나로 선택될 수 있습니다.
 
 - `정적(Static)`: 프로그램이 기동될 때, 메모리 상에 메서드(혹은 함수)의 위치를 고정시킵니다.
   - 즉, 프로그램 내 어디서든 접근할 수 있습니다.

@@ -7,11 +7,11 @@ import * as UserDomain from "./Domains/User";
 const exampleForGoogleSsoAPI = () => {
   // From Request Body..
   const param = {
-    id: "sign-in-origin-userID",
-    pw: "origin-P@SSW04D",
-    email: "origin-user@email.com",
-    comment: "blar-blar-blar",
-    userTel: "010-2222-8888",
+    id: "sso-from-google-userID",
+    pw: "google-P@SSW04D",
+    email: "google-user@gmail.com",
+    comment: "glar-glar-glar",
+    userTel: "+01 23131-122-8888",
   };
 
   const userDefaultProps: UserDomain.UserDefaultProps = {

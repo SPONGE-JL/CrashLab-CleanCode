@@ -35,6 +35,6 @@ Read and talk about [Clean Code](https://enos.itcollege.ee/~jpoial/oop/naited/Cl
 | 강기훈 (KiHoon Kang)   | [dev-river](https://github.com/dev-river)     | [LinkedIn](https://www.linkedin.com/in/dev-river/)              |
 | 김영민 (YoungMin Kim)  | [ym1085](https://github.com/ym1085)           | [LinkedIn](https://www.linkedin.com/in/youngmin-kim-1a245019a/) |
 | 원영식 (YoungSik Won)  | [youngsikwon](https://github.com/youngsikwon) |                                                                 |
-| 김수진                 | [sujin](https://github.com/devSujinKim)       |                                                                 |
+| 김수진 (Sujin Kim)     | [sujin](https://github.com/devSujinKim)       |                                                                 |
 
 - Each memebers must read [this document (Set-up Guide for Contributors)](./README-SETUP.md#set-up-guide-for-contributors)

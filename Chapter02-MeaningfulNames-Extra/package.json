@@ -1,0 +1,20 @@
+{
+  "name": "ch02-meaningful-naming-extra",
+  "version": "1.0.0",
+  "description": "Typescript basic sample package",
+  "main": "main.js",
+  "scripts": {
+    "extra": "ts-node main.ts"
+  },
+  "keywords": [
+    "Typescript"
+  ],
+  "repository": "https://github.com/SPONGE-JL/CrashLab-CleanCode",
+  "author": "SPOGNE-JL (dev2sponge@gmail.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.14.25",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}

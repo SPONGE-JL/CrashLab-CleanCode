@@ -1,10 +1,11 @@
 [Go to index](./#-chapter-06-objects-and-data-structures) / [Read in Wiki](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-06.-Objects-and-Data-Structures-Part-1)
+
 ---
 
 2021.08.21 (SAT) 10:20-12:00 (100mins)  
 🚀 **Lead by. '[Jeongyeol](https://github.com/SPONGE-JL)'**
 
-# Chapter 06. Objects and Data Structures - <u>Part.1</u>
+## Chapter 06. Objects and Data Structures - <u>Part.1</u>
 
 ### 의문문으로 시작하기
 
@@ -28,8 +29,6 @@ public class User {
   public long id;
   public String name;
 }
-
-export Point
 ```
 
 ```typescript

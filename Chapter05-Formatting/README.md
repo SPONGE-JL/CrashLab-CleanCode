@@ -48,7 +48,7 @@ export default App;
 - 서로 밀접한 코드는 가까이 배치한다.
 - 의미 없는 주석은 자제한다.
 
-```javascript
+```java
 // BAD
 // 의미없는 주석으로 변수를 떨어뜨려서 한눈에 파악이 잘 안된다.
 
@@ -68,7 +68,7 @@ public class ReporterConfig {
 }
 ```
 
-```javascript
+```java
 // GOOD
 // 의미 없는 주석을 제거함으로써 코드가 한눈에 들어온다.
 // 변수 2개에 메소드가 1개인 클래스라는 사실이 드러난다.

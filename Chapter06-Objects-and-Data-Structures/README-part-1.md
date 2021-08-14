@@ -1,11 +1,11 @@
-[Go to index](./#-chapter-06-objects-and-data-structures) / [Read in Wiki](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-06.-Objects-and-Data-Structures-Part-1)
+[Go to index](./#-chapter-06-objects-and-data-structures) / [Read in Wiki](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-06.-Objects-and-Data-Structures-Part.1)
 
 ---
 
 2021.08.21 (SAT) 10:20-12:00 (100mins)  
 🚀 **Lead by. '[Jeongyeol](https://github.com/SPONGE-JL)'**
 
-## Chapter 06. Objects and Data Structures - <u>Part.1</u>
+# Chapter 06. Objects and Data Structures - <u>Part.1</u>
 
 ### 의문문으로 시작하기
 
@@ -138,7 +138,7 @@ export default Salary;
 
 ---
 
-## 자료/객체 비대칭
+# 자료/객체 비대칭
 
 > **객체**는 추상화 뒤로 **자료를 숨긴 채**, 자료를 다루는 함수만 공개한다.  
 > 자료구조는 자료 그대로를 공개하며, 별다른 함수를 제공하지 않는다.
@@ -192,8 +192,8 @@ public class Geometry {
 }
 ```
 
-- 클래스를 통해 정보를 담은 인스턴스를 `area(Object shape)` 함수에 집어넣어서 호출하면 면적이 구해진다.
-  - 객체 지향 프로그래머가 위 코드를 본다면 코웃음 칠지도 모르지만, 절차적이라서 비판한다면 맞는 말이다.
+- 클래스를 통해 정보를 담은 인스턴스를 `area(Object shape)` 함수에 집어넣어서 호출하면 면적이 구해진다.  
+  _객체 지향 프로그래머가 위 코드를 본다면 코웃음 칠지도 모르지만, 절차적이라서 비판한다면 맞는 말이다._
 - 도형의 둘레를 구하는 `perimeter(Object shape)` 함수를 추가로 구현한다면?  
   **놀랍게도** `Geometry` 클래스에 의존하는 다른 도형 클래스들의 변화 없이 추가할 수 있다.
 - 반대로 새로운 도형을 추한한다면? 예를 들어 `Pentagon`(정오각형)을 추가한다면?  
@@ -256,12 +256,17 @@ _어떠한가? 두 조건은 완전히 반대된다는 사실을 이해할 수 �
 
 2. 객체와 자료구조는 근본적으로 양분된다. (아래 명제는 참이다)
 
-  1. **자료 구조를 사용하는 <u>절차적인 코드</u>**
-    - 기존 자료 구조를 변경하지 않으면서 **새 함수를 추가하기 쉽다.** ➡️ 기능 구현에 의한 확장
-    - 새로운 자료 구조를 추가하기 어렵다. ➡️ 새로운 자료구조에 대한 추가 기능 구현
+    1. **자료 구조를 사용하는 <u>절차적인 코드</u>**  
+        - 기존 자료 구조를 변경하지 않으면서 **새 함수를 추가하기 쉽다.** ➡️ 기능 구현에 의한 확장
+        - 새로운 자료 구조를 추가하기 어렵다. ➡️ 새로운 자료구조에 대한 추가 기능 구현
 
-  2. **<u>객체 지향 코드</u>**
-    - 기존 함수를 변경하지 않으면서 **새 클래스를 추가하기 쉽다.** ➡️ 다형성을 통한 확장
-    - 새로운 함수를 추가하기 어렵다. ➡️ 다형성에 대한 강제화로 모든 클래스에 대한 수정
+    2. **<u>객체 지향 코드</u>**  
+        - 기존 함수를 변경하지 않으면서 **새 클래스를 추가하기 쉽다.** ➡️ 다형성을 통한 확장
+        - 새로운 함수를 추가하기 어렵다. ➡️ 다형성에 대한 강제화로 모든 클래스에 대한 수정
 
-> 반드시 객체 지향 프로그램에서 "모든 것이 객체다"라는 말은  `미신`이라는 것을 안다.
+> 노련한 프로그래머들은  
+> <u>객체 지향 프로그램에서 반드시 "모든 것이 객체다"라는 말은  `미신`</u>이라는 것을 잘 안다.
+
+---
+
+[Go to Part 2](./README-part-2.md) / [Read in Wiki](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-06.-Objects-and-Data-Structures-Part.2)

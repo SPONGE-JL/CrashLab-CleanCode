@@ -242,20 +242,6 @@ String outputDir = scratchDir.getAbsolutePath();
 
 5. **따라서 개선된 코드는 디미터 법칙을 위반하지 않는다**.
 
----
-
-# 디미터 법칙 (Seg.3) - 사례 확인
-
-## 자료 전달 객체 (DTO)
-
-TODO
-
-## 활성 레코드
-
-TODO
-
----
-
 ## 그 외 디미터 법칙을 이용한 좋은 사례
 
 - Javascript - [메서드 체인 예시](./#basic-method-chain-example)
@@ -296,6 +282,43 @@ TODO
 
 - [Java - Builder Pattern](https://github.com/dev-chloe/Simple-CRUD/blob/back/app/src/test/java/com/toyproject/simplecrudapp/domains/entity/UserTest.java#L23-L28)
 
+---
+
+# 디미터 법칙 (Seg.3) - 사례 확인
+
+## 자료 전달 객체 (DTO)
+
+> 자료 구조체의 전형적인 형태로, 공개 변수만 있고 함수가 없는 클래스를 의미한다.  
+> 이런 자료 구조체를 때로는 **DTO(Data Transfer Object)**로도 부르는데, 굉장히 유요하다.  
+> 일반적으로 데이터베이스와 통신하거나 소켓에서 받은 메시지 구문을 분석하는 등에서 유효하다.
+
+일반적인 예제는 Java의 빈(Bean) 구조이다. 비공개(private) 멤버 변수를 조회/설정 함수로 조작한다.  
+**일종의 사이비 캡슐화로, 일부 객체 지향형 순수주의자의 기준을 만족시킬 뿐, 특별한 이익을 제공하진 않는다.**
+
+- [DTO Java Bean 예제](https://github.com/dev-chloe/Simple-CRUD/blob/main/app/src/main/java/com/toyproject/simplecrudapp/domains/req/UserReqDto.java) + [적용](https://github.com/dev-chloe/Simple-CRUD/blob/main/app/src/main/java/com/toyproject/simplecrudapp/interfaces/UserController.java)
+
+- [DTO Javascript 예제](./dto-js-sample/Account.mjs) + [실행](./dto-js-sample/index.js)
+
+## 활성 레코드
+
+> 활성 레코드는 DTO의 특수한 형태로, 공개 변수가 있거나  
+> 비공개 변수에 조회/설정 함수가 있는 자료구조지만,  
+> 대개 save나 find와 같은 탐색 함수도 제공한다.
+
+즉, 활성 레코드는 데이터베이스 테이블이나 다른 소스에서 자료를 직접 변환한 결과이다.
+
+**불행히도** 활성 레코드에 비지니스 규칙 메서드를 추가해서  
+이런 자료 구조를 객체로로 취급하는 개발자가 흔하다. **하지만 이는 바람직하지 않다.**  
+그러면 자료 구조도 아니고, 객체도 아닌, **잡종구조가 나오기 때문이다.**
+
+### 어떻게 해결할까?
+
+간단하다. **활성 레코드는 자료 구조로 취급한다.**  
+비지니스 규칙을 담으면서 내부 자료를 숨기는 객체는 따로 생성한다.  
+(여기서 내부 자료는 활성 레코드의 인스턴스일 가능성이 높다.)
+
+- [활성 레코드로서의 데이터베이스 테이블을 표현한 Entity 예제](https://github.com/dev-chloe/Simple-CRUD/blob/main/app/src/main/java/com/toyproject/simplecrudapp/domains/User.java)
+- [데이터베이스에 접근하는 탐색/변경 함수가 적용된 Repository 예제](https://github.com/dev-chloe/Simple-CRUD/blob/main/app/src/main/java/com/toyproject/simplecrudapp/domains/UserRepository.java)
 
 ---
 

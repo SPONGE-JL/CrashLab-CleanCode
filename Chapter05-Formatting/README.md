@@ -186,26 +186,37 @@ init();
 ```
 
 ```javascript
-const makeBankAccount = () => {
-  let balance = 0;
+class BankAccount {
+  alias;
+  numberCode;
+  balance;
 
-  const getBalance = () => {
-    return balance;
+  constructor({ alias = "별칭없음", numberCode, balance }) {
+    this.alias = alias;
+    this.numberCode = numberCode;
+    this.balance = balance;
   }
 
-  const setBalance = (amount) => {
-    // balance를 업데이트하기 전 검증로직
-    balance = amount;
+  get basicInfo() {
+    return `${this.alias}: ${this.numberCode} / 현재 잔액: ${this.balance.toLocaleString("ko-KR")} 원`;
   }
-
-  return {
-    getBalance,
-    setBalance
-  };
 }
 
-const account = makeBankAccount();
-account.setBalance(100);
+const dataFromAPI = {
+  alias: "ㅌㅅ 계좌",
+  numberCode: "5353-825-82825",
+  balance: 5126500
+};
+
+const myBankAccount = new BankAccount(dataFromAPI);
+console.log(`[INFO] myBankAccount.alias > ${myBankAccount.alias}`);
+console.log(`[INFO] myBankAccount.numberCode > ${myBankAccount.numberCode}`);
+console.log(`[INFO] myBankAccount.balance > ${myBankAccount.balance}`);
+// [INFO] myBankAccount.alias > ㅌㅅ 계좌
+// [INFO] myBankAccount.numberCode > 5353-825-82825
+// [INFO] myBankAccount.balance > 5126500
+console.log(`[INFO] myBankAccount.basicInfo > ${myBankAccount.basicInfo}`);
+// [INFO] myBankAccount.basicInfo > ㅌㅅ 계좌: 5353-825-82825 / 현재 잔액: 5,126,500 원
 ```
 
 #### 5. 세로 순서

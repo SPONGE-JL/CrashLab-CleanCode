@@ -77,7 +77,37 @@ export default User;
 
 - **생각의 오류 짚고 넘어가기**: `좌항`이 만족된다고 `우항`을 만족하진 않는다.
   - `클래스와 변수 사이에 함수라는 계층을 넣는다` /= `구현이 감춰진다`
-  - `Getter/Setter로 변수를 다룬다` /= `자료구조를 표현하는 클래스`
+  -  `Getter/Setter로 변수를 다룬다` /= `자료구조를 표현하는 클래스`
+    
+      ```javascript
+      // User 클래스로 생성된 인스턴스의 public id 변수를 바로 접근
+      const idFromUserAsDataStructrue = user.id;
+      // User 클래스로 생성된 인스턴스의 public getId() 함수를 통해 변수를 접근
+      const idFromUserAsObject = user.getId();
+      // return id; => 내부 자료를 그대로 노출하는 경우, 구현이 감춰져 있다고 보기 어렵다.
+      ```
+      
+      ```typescript
+      // in Typescript
+      class Execution {
+        private a: number;
+        private b: number;
+
+        constructor(a: number, b: number) {
+          this.a = a;
+          this.b = b;
+        }
+
+        public plus() {
+          return this.a + this.b;
+        }
+      }
+
+      const exec = new Execution(1, 2);
+      // exec.a; // error TS2341: Property 'a' is private
+      const result = exec.plus();
+      console.log(result); // 3
+      ```
 
 - **진정한 의미의 클래스(Class)**
   - **추상 인터페이스를 제공**
@@ -244,9 +274,9 @@ _이쯤에서 다시 한번 읽어보자._
 
 > <u>**객체**는 추상화 뒤로 **자료를 숨긴 채**, 자료를 다루는 **함수만 공개**한다.</u>  
 > - [SOLID 원칙 중 인터페이스 분리 원칙(Interface Segregation Principle)](https://blog.siner.io/2020/06/18/solid-principles/), ([원문](https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898))
+> - [Encapsulation(캡슐화, 은닉성)](https://www.tutorialspoint.com/java/java_encapsulation.htm)
 
 > <u>자료구조는 자료 그대로를 공개하며, **다른 함수를 제공하지 않는다.**</u>
-> - [Encapsulation(캡슐화, 은닉성)](https://www.tutorialspoint.com/java/java_encapsulation.htm)
 
 _어떠한가? 두 조건은 완전히 반대된다는 사실을 이해할 수 있겠는가?_
 

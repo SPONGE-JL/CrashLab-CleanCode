@@ -89,7 +89,7 @@ String outputDir = ctxt.getOptions().getScratchDir().getAbsolutePath();
 ```
 
 ```java
-Option opts = cttx.getOptions();
+Option opts = ctxt.getOptions();
 File scratchDir = opts.getScratchDir();
 String outputDir = scratchDir.getAbsolutePath();
 ```
@@ -176,7 +176,7 @@ String outputDir = scratchDir.getAbsolutePath();
 
 ## 잡종 구조
 
-이런 혼란으로 말미암아 때때로 **절반은 객체, 절반은 자료구조인 <u>잡종 구조</u>**가 나온다.
+이런 혼란으로 말미암아 때때로 **절반은 객체, 절반은 자료구조인 <u>잡종 구조</u>** 가 나온다.
 
 - 중요한 기능을 수행하는 함수도 가지고 있고, 공개 변수나 공개 조회/설정 함수도 있다.
 - 공개 조회/설정 함수는 비공개 변수를 그대로 노출한다.
@@ -186,7 +186,7 @@ String outputDir = scratchDir.getAbsolutePath();
 
 - 새로운 함수의 추가나 새로운 자료구조 추가를 어렵게 만든다.
 
-프로그래머가 함수나 타입을 포호할지 공개할지 확신하지 못해서  
+프로그래머가 함수나 타입을 보호할지 공개할지 확신하지 못해서  
 (혹은 무지해서) 어중간하게 내놓은 설계에 불과하다.
 
 ---
@@ -201,7 +201,7 @@ String outputDir = scratchDir.getAbsolutePath();
 
 > 그렇다면, 디렉토리 경로 정보를 어떻게 얻어야 좋을까?
 
-1. `ctxt`가 Context(맥락)을 포함하는 객체라면 **"뭔가를 하라"**고 말해야한다.  
+1. `ctxt`가 Context(맥락)을 포함하는 객체라면 **"뭔가를 하라"** 고 말해야한다.  
    속에 들어있는 자료 구조를 드러내서는 안된다.
 
 2. 코드는 절대경로를 구하려고 하고 있는데, 저 경로 정보가 왜 필요할까?  
@@ -255,7 +255,7 @@ String outputDir = scratchDir.getAbsolutePath();
     - `ctxt` 객체는 내부 구조를 드러내지 않는다.
     - `ctxt` 객체를 다루는 모듈에서 자신이 몰라도 되는 여러 객체를 탐색할 필요가 없다.
 
-5. **따라서 개선된 코드는 디미터 법칙을 위반하지 않는다**.
+5. **따라서 개선된 코드는 디미터 법칙을 위반하지 않는다.**
 
 ## 그 외 디미터 법칙을 이용한 예제
 
@@ -304,7 +304,7 @@ String outputDir = scratchDir.getAbsolutePath();
 ## 자료 전달 객체 (DTO)
 
 > 자료 구조체의 전형적인 형태로, 공개 변수만 있고 함수가 없는 클래스를 의미한다.  
-> 이런 자료 구조체를 때로는 **DTO(Data Transfer Object)**로도 부르는데, 굉장히 유요하다.  
+> 이런 자료 구조체를 때로는 **DTO(Data Transfer Object)** 로도 부르는데, 굉장히 유요하다.  
 > 일반적으로 데이터베이스와 통신하거나 소켓에서 받은 메시지 구문을 분석하는 등에서 유효하다.
 
 일반적인 예제는 Java의 빈(Bean) 구조이다. 비공개(private) 멤버 변수를 조회/설정 함수로 조작한다.  
@@ -348,8 +348,8 @@ String outputDir = scratchDir.getAbsolutePath();
     - 기존 함수에 새로운 구조를 추가하기는 어렵다.
 
 3. 시스템을 구현할 때,
-    - 새로운 자료 타입을 추가하는 유연성이 필요하다면, **객체**가 적합하다.
-    - 새로운 동작을 추가하는 유연성이 필요하면, **자료 구조와 절차적인 코드**가 적합하다.
+    - 새로운 자료 타입을 추가하는 유연성이 필요하다면, **객체** 가 적합하다.
+    - 새로운 동작을 추가하는 유연성이 필요하면, **자료 구조와 절차적인 코드** 가 적합하다.
 
 4. 우수한 소프트웨어 개발자는 편견없이 이 사실을 이해하고,  
     **직면한 문제에 최적인 해결책을 선택**한다.

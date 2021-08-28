@@ -1,4 +1,5 @@
 [Read in Wiki](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-02.-Meaningful-Names)
+
 ---
 
 2021.07.17 (SAT) 10:20-12:00 (100mins)  

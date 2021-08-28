@@ -1,4 +1,5 @@
 [Read in Wiki](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-01.-Clean-Code)
+
 ---
 
 2021.07.10 (SAT) 10:20-12:00 (100mins)  

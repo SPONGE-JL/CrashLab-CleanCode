@@ -20,6 +20,41 @@ React.js는 기본적으로 Node.js 환경에서 동작하는 엔진 라이브�
   </a>
 </p>
 
+## Practice
+
+### Test Targets
+
+1. **React DOM**: [index.ts](./src/index.tsx#L7-L12) & [index.test.tsx](./src/index.index.test.tsx)
+
+    ![react-dom-test](./captures/react-dom-test.png)
+
+2. **React Components**:
+   1. **Tag Tree (Container)**:
+   2. **Style (CSS)**:
+   3. **Props & State**:
+
+3. **Other Functions**
+   1. Contained-Logic: ex. Function Call
+   2. Dependent-Logic: ex. API Call
+
+### How to run
+
+```bash
+# Install Dependencies
+yarn install
+# or | npm install
+
+# Unit Test
+yarn test
+# or | npm run test
+
+# Check Test Coverage
+yarn test --coverage --watchAll
+# or | npm run test -- --coverage --watchAll
+```
+
+---
+
 ## Project Dependencies
 
 ### Typescript Complier: `tsconfig.json`
@@ -41,18 +76,3 @@ yarn add --dev husky lint-staged prettier
 yarn add styled-components
 yarn add --dev @types/styled-components jest-styled-components
 ```
-
-## TDD on React.js
-
-### React 소스코드에 대한 테스트 대상
-
-1. React DOM
-
-2. React Components
-   1. Tag Tree (Container)
-   2. Style (CSS)
-   3. Props & State
-
-3. Other Functions
-   1. Inner-Service Logic: Function Call
-   2. Outer-Service Logic: API Call

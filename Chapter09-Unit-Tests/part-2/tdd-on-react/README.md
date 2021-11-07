@@ -20,6 +20,178 @@ React.js는 기본적으로 Node.js 환경에서 동작하는 엔진 라이브�
   </a>
 </p>
 
+## Test cycle
+
+### 1. 실제 코드는 작성없이 테스트 수행 내역을 코드로 작성하기
+
+Init [`src/Components/Input/index.test.tsx`](./src/Components/Input/index.test.tsx):
+
+```typescript
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import 'jest-styled-components';
+
+import { Input } from './index'; // compire error
+
+describe('<InputBox />', () => {
+  it('should render its components', () => {
+    const { container } = render(<Input placeholder="This is an InputBox." />);
+
+    const input = screen.getByDisplayValue('This is an InputBox.');
+    expect(input).toBeInTheDocument();
+    expect(input).toMatchSnapshot();
+    
+    expect(container).toMatchSnapshot();
+  });
+});
+```
+
+<details>
+<summary>in vscode</summary><br>
+
+![1-test-code](./captures/in-tdd-cycle/1-test-code.png)
+
+</details>
+
+```bash
+yarn test --watchAll
+```
+
+<details>
+<summary>in terminal</summary><br>
+
+![1-test-result](./captures/in-tdd-cycle/1-test-result.png)
+
+</details>
+
+### 2. 테스트 결과는 실패하지만 컴파일에 문제가 없도록 실제 코드 작성하기
+
+Init [`src/Components/Input/index.tsx`](./src/Components/Input/index.tsx):
+
+```typescript
+import React from 'react';
+import Styled from 'styled-components';
+
+const Input = Styled.input``;
+
+export const InputBox = () => {
+  return <Input />;
+};
+```
+
+<details>
+<summary>in vscode</summary><br>
+
+![2-code](./captures/in-tdd-cycle/2-code.png)
+
+</details>
+
+<details>
+<summary>in terminal</summary><br>
+
+![2-test-result](./captures/in-tdd-cycle/2-test-result.png)
+
+</details>
+
+### 3. 실제 코드를 수정해서 테스트를 통과시키기
+
+Edit [`src/Components/Input/index.tsx`](./src/Components/Input/index.tsx):
+
+```typescript
+import React from 'react';
+import Styled from 'styled-components';
+
+const InputBox = Styled.input``;
+
+export const Input = ({ placeholder }: { readonly placeholder?: string }) => {
+  return <InputBox placeholder={placeholder} />;
+};
+```
+
+<details>
+<summary>in vscode</summary><br>
+
+![3-code](./captures/in-tdd-cycle/3-code.png)
+
+</details>
+
+<details>
+<summary>in terminal</summary><br>
+
+![3-test-result](./captures/in-tdd-cycle/3-test-result.png)
+
+</details>
+
+### 4. 리팩토링
+
+Refactor [`src/Components/Input/index.tsx`](./src/Components/Input/index.tsx):
+
+```typescript
+import React from 'react';
+import Styled from 'styled-components';
+
+//- Sytled Component
+const InputBox = Styled.input``;
+
+//- React Component
+interface Props {
+  readonly placeholder?: string;
+}
+
+export const Input = ({ placeholder }: Props) => {
+  return <InputBox placeholder={placeholder} />;
+};
+```
+
+Refactor [`src/Components/Input/index.test.tsx`](./src/Components/Input/index.test.tsx):
+
+```typescript
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import 'jest-styled-components';
+
+import { Input } from './index';
+
+describe('<Input />', () => {
+  it('should render its components', () => {
+    const { container } = render(<Input placeholder="This is an Input tag." />);
+    expect(container).toMatchSnapshot(); // capture
+
+    const input = screen.getByPlaceholderText('This is an Input tag.');
+    expect(input).toBeInTheDocument();
+    expect(input).toMatchSnapshot(); // capture
+  });
+});
+
+```
+
+<details>
+<summary>in vscode</summary><br>
+
+![4-code-refactor](./captures/in-tdd-cycle/4-code-refactor.png)
+
+![4-test-refactor](./captures/in-tdd-cycle/4-test-refactor.png)
+
+</details>
+
+<details>
+<summary>in terminal</summary><br>
+
+Initial Pass:
+![4-test-result](./captures/in-tdd-cycle/4-test-result.png)
+
+Rerun (Pass):
+![4-test-result-rerun](./captures/in-tdd-cycle/4-test-result-rerun.png)
+
+</details>
+
+<details>
+<summary>in directory</summary><br>
+
+![directory](./captures/in-tdd-cycle/4-directory.png)
+
+</details>
+
 ## Practice
 
 ### Test Targets

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should render its components 1`] = `
+<div>
+  <input
+    class=""
+    placeholder="This is an Input tag."
+  />
+</div>
+`;
+
+exports[`<Input /> should render its components 2`] = `
+<input
+  class="sc-bdvvtL"
+  placeholder="This is an Input tag."
+/>
+`;

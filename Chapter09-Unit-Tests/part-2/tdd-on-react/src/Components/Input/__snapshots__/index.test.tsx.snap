@@ -1,17 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Input /> should render its components 1`] = `
+exports[`<Input /> should render with a props: "placeholder" 1`] = `
+.c0 {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #BDBDBD;
+  outline: none;
+  padding: 10px;
+  margin-right: 10px;
+}
+
 <div>
   <input
-    class=""
+    class="c0"
     placeholder="This is an Input tag."
   />
 </div>
 `;
 
-exports[`<Input /> should render its components 2`] = `
+exports[`<Input /> should render with a props: "placeholder" 2`] = `
 <input
-  class="sc-bdvvtL"
+  class="sc-bdvvtL lMNJP"
   placeholder="This is an Input tag."
 />
 `;

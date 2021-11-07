@@ -196,14 +196,15 @@ Rerun (Pass):
 
 ### Test Targets
 
-1. **React DOM**: [index.ts](./src/index.tsx#L7-L12) & [index.test.tsx](./src/index.index.test.tsx)
+1. **React DOM**: [Index Test](./src/index.index.test.tsx) && [Index](./src/index.tsx#L7-L12)
 
     ![react-dom-test](./captures/react-dom-test.png)
 
 2. **React Components**:
-   1. **Tag Tree (Container)**:
-   2. **Style (CSS)**:
-   3. **Props & State**:
+   1. **Style Rules**: [Input Test](./src/Components/Input/index.test.tsx#L8-L20) && [Input](./src/Components/Input/index.tsx#L5-L14)
+   2. **Component Tree**:
+   3. **Props**:
+   4. **State**:
 
 3. **Other Functions**
    1. Contained-Logic: ex. Function Call

@@ -218,7 +218,9 @@ Rerun (Pass):
    1. Contained-Logic:
       [Utils.Calculator.add Test](./src/Utils/Calculator/add.test.tsx)  
       <img alt="react-function-call-test" width="700" src="./captures/react-function-call-test.png">
-   2. Dependent-Logic: ex. API Call
+   2. Dependent-Logic:
+      ex. [Axios Test](https://github.com/lnolazco/hutoma-test/blob/master/src/services/chatbot.test.js) &
+      [Service(Axios)](https://github.com/lnolazco/hutoma-test/blob/master/src/services/chatbot.js)
 
 ### How to run
 

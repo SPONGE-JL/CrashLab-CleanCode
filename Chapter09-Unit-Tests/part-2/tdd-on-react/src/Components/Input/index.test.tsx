@@ -35,6 +35,26 @@ describe('<Input />', () => {
     expect(input).toBeInTheDocument();
     expect(input).toMatchSnapshot();
   });
+
+  it('should render with a props: "value"', () => {
+    const { container } = render(<Input value="Inserted some text." />);
+    expect(container).toMatchSnapshot();
+
+    const input = pickInputTagFrom(container, 'Inserted some text.');
+    expect(input).toMatchSnapshot();
+  });
+
+  it('should render with a props: "onChange"', () => {
+    const mockChange = jest.fn();
+    const { container } = render(<Input onChange={mockChange} />);
+    expect(container).toMatchSnapshot();
+
+    const input = pickInputTagFrom(container, '');
+    expect(mockChange).toHaveBeenCalledTimes(0);
+    fireEvent.change(input, { target: { value: 'type something' } });
+    expect(mockChange).toHaveBeenCalledTimes(1);
+    expect(input).toMatchSnapshot();
+  });
 });
 
 const pickInputTagFrom = (container: HTMLElement, defaultValue: string): HTMLInputElement => {

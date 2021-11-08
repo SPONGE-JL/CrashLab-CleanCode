@@ -196,19 +196,28 @@ Rerun (Pass):
 
 ### Test Targets
 
-1. **React DOM**: [Index Test](./src/index.index.test.tsx) && [Index](./src/index.tsx#L7-L12)
-
+1. **React DOM**:
+   [Index Test](./src/index.index.test.tsx) &
+   [Index](./src/index.tsx#L7-L12)  
     <img alt="react-dom-test" height="125" src="./captures/react-dom-test.png">
-
 2. **React Components**:
-   1. **Style Rules**: [Input Test](./src/Components/Input/index.test.tsx#L8-L20) & [Input](./src/Components/Input/index.tsx#L5-L14)
-   2. **Component Tree**: [Button Test](./src/Components/Button/index.test.tsx#L8-L27) & [Button](./src/Components/Button/index.tsx#L37-L43)
-   3. **Props**: [Input Props Test](./src/Components/Input/index.test.tsx#L30-L57) & [Input](./src/Components/Input/index.tsx#L17-L36)
-   4. **State**: [App Test](./src/App.test.tsx#L22-L36) & [App](./src/App.tsx#L44)
-      <img alt="react-components-test" height="150" src="./captures/react-components-test.png">
-
+   1. **Style Rules**:
+      [Input Test](./src/Components/Input/index.test.tsx#L8-L20) &
+      [Input](./src/Components/Input/index.tsx#L5-L14)
+   2. **Component Tree**:
+      [Button Test](./src/Components/Button/index.test.tsx#L8-L27) &
+      [Button](./src/Components/Button/index.tsx#L37-L43)
+   3. **Props**:
+      [Input Props Test](./src/Components/Input/index.test.tsx#L30-L57) &
+      [Input](./src/Components/Input/index.tsx#L17-L36)
+   4. **State**:
+      [App Test](./src/App.test.tsx#L22-L36) &
+      [App](./src/App.tsx#L44)  
+      <img alt="react-components-test" width="700" src="./captures/react-components-test.png">
 3. **Other Functions**
-   1. Contained-Logic: ex. Function Call
+   1. Contained-Logic:
+      [Utils.Calculator.add Test](./src/Utils/Calculator/add.test.tsx)  
+      <img alt="react-function-call-test" width="700" src="./captures/react-function-call-test.png">
    2. Dependent-Logic: ex. API Call
 
 ### How to run

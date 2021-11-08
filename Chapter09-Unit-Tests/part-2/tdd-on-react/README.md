@@ -198,13 +198,14 @@ Rerun (Pass):
 
 1. **React DOM**: [Index Test](./src/index.index.test.tsx) && [Index](./src/index.tsx#L7-L12)
 
-    ![react-dom-test](./captures/react-dom-test.png)
+    <img alt="react-dom-test" height="125" src="./captures/react-dom-test.png">
 
 2. **React Components**:
-   1. **Style Rules**: [Input Test](./src/Components/Input/index.test.tsx#L8-L20) && [Input](./src/Components/Input/index.tsx#L5-L14)
-   2. **Component Tree**:
-   3. **Props**:
-   4. **State**:
+   1. **Style Rules**: [Input Test](./src/Components/Input/index.test.tsx#L8-L20) & [Input](./src/Components/Input/index.tsx#L5-L14)
+   2. **Component Tree**: [Button Test](./src/Components/Button/index.test.tsx#L8-L27) & [Button](./src/Components/Button/index.tsx#L37-L43)
+   3. **Props**: [Input Props Test](./src/Components/Input/index.test.tsx#L30-L57) & [Input](./src/Components/Input/index.tsx#L17-L36)
+   4. **State**: [App Test](./src/App.test.tsx#L22-L36) & [App](./src/App.tsx#L44)
+      <img alt="react-components-test" height="150" src="./captures/react-components-test.png">
 
 3. **Other Functions**
    1. Contained-Logic: ex. Function Call

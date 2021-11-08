@@ -57,7 +57,7 @@ describe('<Input />', () => {
   });
 });
 
-const pickInputTagFrom = (container: HTMLElement, defaultValue: string): HTMLInputElement => {
+export const pickInputTagFrom = (container: HTMLElement, defaultValue: string): HTMLInputElement => {
   const inputTags = container.getElementsByTagName('input');
   expect(inputTags).toHaveLength(1);
 

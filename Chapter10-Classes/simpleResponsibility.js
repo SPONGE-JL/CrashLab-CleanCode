@@ -3,6 +3,7 @@ class Bus {
   #isSingleFloor;
   #driver;
   #seatCount;
+
   constructor(props) {
     const { wheel, isSingleFloor, driver, seatCount } = props;
     // 바퀴는 몇 개인가?
@@ -15,29 +16,41 @@ class Bus {
     this.#seatCount = seatCount;
   }
 
-  get capacity() {
-    return this.#seatCount
-  }
-
-  get deck() {
-    return this.#isSingleFloor ? 1 : 2;
-  }
-
   generateStatusData() {
     return {
       bus: {
-        name: "'driver-kim'의 신규 버스",
-        owner: {
-          driverName: "김운전",
-          company: "Chloe-BusBus"
-        },
-        spec: {
-          wheel: 6,
-          deck: 2,
-          seatCount: 60,
-        }
+        name: this.#getBusName(),
+        owner: this.#getBusOwner(),
+        spec: this.#busSpec
       }
     }
+  }
+
+  #getBusName() {
+    return `'${this.#driver.alias}'의 신규 버스`;
+  }
+
+  #getBusOwner() {
+    return {
+      driverName: this.#driver.name,
+      company: "Chloe-BusBus"
+    }
+  }
+
+  get #busSpec() {
+    return {
+      wheel: this.#wheel,
+      deck: this.#deck,
+      seatCount: this.#capacity,
+    }
+  }
+
+  get #deck() {
+    return this.#isSingleFloor ? 1 : 2;
+  }
+
+  get #capacity() {
+    return this.#seatCount
   }
 }
 

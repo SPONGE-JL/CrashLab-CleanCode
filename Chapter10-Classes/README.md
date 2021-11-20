@@ -44,34 +44,36 @@
 
     get info() {
       // ex. 사람이 60명이 탈 수 있는 바퀴 6개 달린 2층 버스
-      return `사람이 ${this.passenger}명이 탈 수 있는 바퀴 ${this.wheel}개가 달린 ${this.isSingleFloor? 1 : 2}층 버스`;
+      return `사람이 ${this.passenger}명이 탈 수 있는 바퀴 ${this.wheel}개가 달린 ${this.isSingleFloor ? 1 : 2}층 버스`;
     }
   }
   ```
 
-  - "사람이 60명이 탈 수 있는 바퀴 6개 달린 2층 버스"
+  - 호출 및 실행 결과
 
-    ```javascript
-    // simpleClass.js
-    const myBus = new Bus({
-      wheel: 6,
-      isSingleFloor: false,
-      driver: {
-        name: '김운전',
-        alias: 'driver-kim'
-      },
-      passenger: 60
-    })
+  ```javascript
+  // simpleClass.js
+  const myBus = new Bus({
+    wheel: 6,
+    isSingleFloor: false,
+    driver: {
+      name: "김운전",
+      alias: "driver-kim",
+    },
+    passenger: 60,
+  });
 
-    console.log(myBus.info);
-    ```
+  console.log(myBus.info);
+  ```
 
-  - "실행 결과"
+  ```bash
+  # 실행
+  node simpleClass.js
+  ```
 
-    ```bash
-    node simpleClass.js
-    # 사람이 60명이 탈 수 있는 바퀴 6개가 달린 2층 버스
-    ```
+  ```plaintext
+  사람이 60명이 탈 수 있는 바퀴 6개가 달린 2층 버스
+  ```
 
 ### 캡슐화
 
@@ -87,7 +89,74 @@
 <u>BUT</u>, 그 전에 비공개 상태를 유지할 온갖 방법을 강구해야 한다.  
 🙏🙏🙏**<u>캡슐화를 풀어주는 결정은 언제나 최후의 수단이다</u>**🙏🙏🙏
 
-- `TODO` 표준 자바스크립트에서의 캡슐화 예제
+- 표준 자바스크립트에서의 캡슐화 예제: [simpleEncapsulation.js](./simpleEncapsulation.js#L1-L25)
+
+  ```javascript
+  // simpleEncapsulation.js
+  class Bus {
+    #wheel;
+    #isSingleFloor;
+    #driver;
+    #seatCount;
+    constructor(props) {
+      const { wheel, isSingleFloor, driver, seatCount } = props;
+      // 바퀴는 몇 개인가?
+      this.#wheel = wheel;
+      // 버스는 단층인가? 2층인가?
+      this.#isSingleFloor = isSingleFloor;
+      // 운전자
+      this.#driver = driver;
+      // 좌석 개수
+      this.#seatCount = seatCount;
+    }
+
+    get capacity() {
+      return this.#seatCount;
+    }
+
+    get deck() {
+      return this.#isSingleFloor ? 1 : 2;
+    }
+  }
+  ```
+
+  - 호출 및 실행 결과
+
+    ```javascript
+    // simpleEncapsulation.js
+    const myBusInfo = {
+      wheel: 6,
+      isSingleFloor: false,
+      driver: {
+        name: "김운전",
+        alias: "driver-kim",
+      },
+      seatCount: 60,
+    };
+    console.log(myBusInfo);
+
+    const myBus = new Bus(myBusInfo);
+    console.log(myBus);
+    console.log(myBus.capacity);
+    console.log(myBus.deck);
+    ```
+
+    ```bash
+    # 실행
+    node simpleEncapsulation.js
+    ```
+
+    ```plaintext
+    {
+      wheel: 6,
+      isSingleFloor: false,
+      driver: { name: '김운전', alias: 'driver-kim' },
+      seatCount: 60
+    }
+    Bus {}
+    60
+    2
+    ```
 
 ## 클래스는 작아야 한다!
 
@@ -95,7 +164,7 @@
 
 클래스를 만들 때 **'작게'** 가 기본 규칙이란 의미이다.
 
-🙋‍♀️:  
+🙋‍♀️:
 "선생님, 질문있어요. 그럼 얼마나 작아야하죠?"
 
 👨‍🏫:

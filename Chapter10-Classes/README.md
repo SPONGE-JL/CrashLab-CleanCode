@@ -24,9 +24,54 @@
 
   > 위의 **표준에 따라 클래스를 만들면 프로그램은 신문 기사처럼 읽힌다.**
 
-- `TODO` 표준 자바스크립트에서의 클래스의 정의
+- 표준 자바스크립트에서의 클래스의 정의 ([MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes#class_%EC%A0%95%EC%9D%98)): [simpleClass.js](./simpleClass.js#L1-L18)
 
-  - MDN 사이트에서 본 내용 예제 만들기(신문 기사처럼 읽히는 간단한 예제)
+  ```javascript
+  // simpleClass.js
+  // 클래스 선언을 이용한 클래스 정의 예제
+  class Bus {
+    constructor(props) {
+      const { wheel, isSingleFloor, driver, passenger } = props;
+      // 바퀴는 몇 개인가?
+      this.wheel = wheel;
+      // 버스는 단층인가? 2층인가?
+      this.isSingleFloor = isSingleFloor;
+      // 운전자
+      this.driver = driver;
+      // 좌석 개수
+      this.passenger = passenger;
+    }
+
+    get info() {
+      // ex. 사람이 60명이 탈 수 있는 바퀴 6개 달린 2층 버스
+      return `사람이 ${this.passenger}명이 탈 수 있는 바퀴 ${this.wheel}개가 달린 ${this.isSingleFloor? 1 : 2}층 버스`;
+    }
+  }
+  ```
+
+  - "사람이 60명이 탈 수 있는 바퀴 6개 달린 2층 버스"
+
+    ```javascript
+    // simpleClass.js
+    const myBus = new Bus({
+      wheel: 6,
+      isSingleFloor: false,
+      driver: {
+        name: '김운전',
+        alias: 'driver-kim'
+      },
+      passenger: 60
+    })
+
+    console.log(myBus.info);
+    ```
+
+  - "실행 결과"
+
+    ```bash
+    node simpleClass.js
+    # 사람이 60명이 탈 수 있는 바퀴 6개가 달린 2층 버스
+    ```
 
 ### 캡슐화
 

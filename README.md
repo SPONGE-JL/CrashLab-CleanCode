@@ -30,7 +30,7 @@ Read and talk about [Clean Code](https://enos.itcollege.ee/~jpoial/oop/naited/Cl
   / [Part.2](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-06.-Objects-and-Data-Structures-Part.2)
 
 - [Chapter 07. Error Handling](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-07.-Error-Handling)
-  [영민](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313194)]
+  [[영민](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313194)]
 
 - [Chapter 08. Boundaries](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-08.-Boundaries)
   [[영식](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313184)]

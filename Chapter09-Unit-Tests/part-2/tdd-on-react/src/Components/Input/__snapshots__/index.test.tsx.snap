@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should render with a props: "onChange" 1`] = `
+.c0 {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #BDBDBD;
+  outline: none;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+<div>
+  <input
+    class="c0"
+    value=""
+  />
+</div>
+`;
+
+exports[`<Input /> should render with a props: "onChange" 2`] = `
+<input
+  class="sc-bdvvtL lMNJP"
+  value=""
+/>
+`;
+
+exports[`<Input /> should render with a props: "placeholder" 1`] = `
+.c0 {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #BDBDBD;
+  outline: none;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+<div>
+  <input
+    class="c0"
+    placeholder="This is an Input tag."
+    value=""
+  />
+</div>
+`;
+
+exports[`<Input /> should render with a props: "placeholder" 2`] = `
+<input
+  class="sc-bdvvtL lMNJP"
+  placeholder="This is an Input tag."
+  value=""
+/>
+`;
+
+exports[`<Input /> should render with a props: "value" 1`] = `
+.c0 {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #BDBDBD;
+  outline: none;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+<div>
+  <input
+    class="c0"
+    value="Inserted some text."
+  />
+</div>
+`;
+
+exports[`<Input /> should render with a props: "value" 2`] = `
+<input
+  class="sc-bdvvtL lMNJP"
+  value="Inserted some text."
+/>
+`;

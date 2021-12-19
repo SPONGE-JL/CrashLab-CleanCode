@@ -36,8 +36,7 @@ Read and talk about [Clean Code](https://enos.itcollege.ee/~jpoial/oop/naited/Cl
   [[영식](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313184)]
 
 - [Chapter 09. Unit Tests](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-09.-Unit-Tests)
-  [~~영민~~ > [정렬](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313174)]
-  + [TDD Sample on React](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-09.-Unit-Tests-Part.1)
+  [~~영민~~ > [정렬](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313174)] + [TDD Sample on React](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-09.-Unit-Tests-Part.1)
 
 - [Chapter 10. Classes](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-10.-Classes)
   [[성현](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313168)]

@@ -1,0 +1,336 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should handle state: "todo" - it makes the input tag clean after click the "Add button". 1`] = `
+.c3 {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #BDBDBD;
+  outline: none;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.c4 {
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #304FFE;
+}
+
+.c4:hover {
+  background-color: #1639FE;
+}
+
+.c4:active {
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+.c5 {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 50%;
+  margin: 0% 25%;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: :#FFFFFF;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <p>
+        cache
+      </p>
+      <div
+        class="c2"
+      >
+        <input
+          class="c3"
+          placeholder="Insert a new todo"
+          value="type something"
+        />
+        <div
+          class="c4"
+        >
+          <div
+            class="c5"
+          >
+            Add
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<App /> should handle state: "todo" - it makes the input tag clean after click the "Add button". 2`] = `
+<div>
+  <div
+    class="sc-eCImPb eZMCne"
+  >
+    <div
+      class="sc-jRQBWg itwRPG"
+    >
+      <p>
+        type something
+      </p>
+      <div
+        class="sc-hKwDye kIiDBr"
+      >
+        <input
+          class="sc-bdvvtL lMNJP"
+          placeholder="Insert a new todo"
+          value=""
+        />
+        <div
+          class="sc-gsDKAQ gSWOZW"
+        >
+          <div
+            class="sc-dkPtRN kvylGA"
+          >
+            Add
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<App /> should render its components. 1`] = `
+.c3 {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #BDBDBD;
+  outline: none;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.c4 {
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #304FFE;
+}
+
+.c4:hover {
+  background-color: #1639FE;
+}
+
+.c4:active {
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+.c5 {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 50%;
+  margin: 0% 25%;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: :#FFFFFF;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <p>
+        cache
+      </p>
+      <div
+        class="c2"
+      >
+        <input
+          class="c3"
+          placeholder="Insert a new todo"
+          value=""
+        />
+        <div
+          class="c4"
+        >
+          <div
+            class="c5"
+          >
+            Add
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Input /> should render with a props: "onChange" 1`] = `
+.c0 {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #BDBDBD;
+  outline: none;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+<div>
+  <input
+    class="c0"
+    value=""
+  />
+</div>
+`;
+
+exports[`<Input /> should render with a props: "onChange" 2`] = `
+<input
+  class="sc-bdvvtL lMNJP"
+  value=""
+/>
+`;
+
+exports[`<Input /> should render with a props: "placeholder" 1`] = `
+.c0 {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #BDBDBD;
+  outline: none;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+<div>
+  <input
+    class="c0"
+    placeholder="This is an Input tag."
+    value=""
+  />
+</div>
+`;
+
+exports[`<Input /> should render with a props: "placeholder" 2`] = `
+<input
+  class="sc-bdvvtL lMNJP"
+  placeholder="This is an Input tag."
+  value=""
+/>
+`;
+
+exports[`<Input /> should render with a props: "value" 1`] = `
+.c0 {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #BDBDBD;
+  outline: none;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+<div>
+  <input
+    class="c0"
+    value="Inserted some text."
+  />
+</div>
+`;
+
+exports[`<Input /> should render with a props: "value" 2`] = `
+<input
+  class="sc-bdvvtL lMNJP"
+  value="Inserted some text."
+/>
+`;

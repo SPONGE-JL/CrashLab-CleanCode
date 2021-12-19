@@ -29,18 +29,15 @@ Read and talk about [Clean Code](https://enos.itcollege.ee/~jpoial/oop/naited/Cl
   : [Part.1](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-06.-Objects-and-Data-Structures-Part.1)
   / [Part.2](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-06.-Objects-and-Data-Structures-Part.2)
 
+- [Chapter 07. Error Handling](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-07.-Error-Handling)
+  [영민](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313194)]
+
 - [Chapter 08. Boundaries](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-08.-Boundaries)
   [[영식](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313184)]
 
 - [Chapter 09. Unit Tests](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-09.-Unit-Tests)
-  [[정렬](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313174)]
-  : [Part.1](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-09.-Unit-Tests-Part.1)
-  / [Part.2](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-09.-Unit-Tests-Part.2)
-
-- (Partition! 🍀)
-
-- [Chapter 07. Error Handling](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-07.-Error-Handling)
-  [[정렬](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313194)]
+  [~~영민~~ > [정렬](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313174)]
+  + [TDD Sample on React](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-09.-Unit-Tests-Part.1)
 
 - [Chapter 10. Classes](https://github.com/SPONGE-JL/CrashLab-CleanCode/wiki/Chapter-10.-Classes)
   [[성현](https://github.com/SPONGE-JL/CrashLab-CleanCode/projects/1#card-64313168)]
